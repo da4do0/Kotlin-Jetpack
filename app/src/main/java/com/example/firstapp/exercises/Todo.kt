@@ -36,10 +36,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.firstapp.R
-import kotlin.collections.plus
 
 data class Todo(val id: Int, val testo: String)
 
