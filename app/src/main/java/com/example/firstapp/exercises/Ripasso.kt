@@ -27,12 +27,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import kotlin.collections.listOf
 
 
@@ -43,7 +45,7 @@ data class Product(
 )
 
 @Composable
-fun Ripasso() {
+fun Ripasso(navController: NavController) {
     var name by remember { mutableStateOf("") }
     var qtn by remember { mutableStateOf(1) }
 
@@ -60,7 +62,6 @@ fun Ripasso() {
         ) {
             Column(
                 modifier = Modifier
-                    //.border(2.dp, color = Color.Red)
                     .fillMaxWidth()
                     .padding(8.dp),
                 horizontalAlignment = Alignment.Start,
